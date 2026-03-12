@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       birth_year: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       nationality: {
         type: Sequelize.STRING
