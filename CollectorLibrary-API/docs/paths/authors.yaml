@@ -22,6 +22,7 @@ post:
             first_name: "Ernest"
             last_name: "Hemingway"
             birth_year: "1899"
+            nationality: "American"
   responses:
     "201":
       description: Autor creado con éxito

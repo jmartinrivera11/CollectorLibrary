@@ -1,0 +1,98 @@
+post:
+  summary: Create a new book
+  tags: [Books]
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            title:
+              type: string
+            authorId:
+              type: integer
+            genre:
+              type: string
+              nullable: true
+            publication_year:
+              type: string
+              nullable: true
+            isbn:
+              type: string
+            page_count:
+              type: integer
+              nullable: true
+          example:
+            title: "The Old Man and the Sea"
+            isbn: "9780684801223"
+            author_id: 1
+            publication_year: "1952"
+            genre: "Fiction"
+  responses:
+    "201":
+      description: Libro creado con éxito
+      content:
+        application/json:
+          example:
+            status: 201
+            data:
+              id: 1
+              title: "The Old Man and the Sea"
+              isbn: "9780684801223"
+              author_id: 1
+              published_year: "1952"
+              genre: "Fiction"
+    "406":
+      description: No se recibieron datos válidos
+      content:
+        application/json:
+          example:
+            status: 406
+            message: "Invalid book data"
+    "500":
+      description: Error interno del servidor
+      content:
+        application/json:
+          example:
+            status: 500
+            message: "Error creating book"
+
+get:
+  summary: Get a book by ISBN
+  tags: [Books]
+  parameters:
+    - in: path
+      name: isbn
+      required: true
+      schema:
+        type: string
+      description: ISBN del libro
+  responses:
+    "200":
+      description: Libro encontrado
+      content:
+        application/json:
+          example:
+            status: 200
+            data:
+              id: 1
+              title: "The Old Man and the Sea"
+              isbn: "9780684801223"
+              author_id: 1
+              published_year: "1952"
+              genre: "Fiction"
+    "204":
+      description: No se encontró el libro
+      content:
+        application/json:
+          example:
+            status: 204
+            message: "No book found"
+    "500":
+      description: Error interno del servidor
+      content:
+        application/json:
+          example:
+            status: 500
+            message: "Error fetching book"

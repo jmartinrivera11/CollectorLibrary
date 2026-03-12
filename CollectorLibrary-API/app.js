@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var routesTestRouter = require('./routes/routesTest');
 var authorsRouter = require('./routes/authors');
+const booksRoutes = require('./routes/books');
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/testRoute', routesTestRouter);
 app.use('/api', authorsRouter);
+app.use('/api', booksRoutes);
 
 swaggerSetup(app);
 
