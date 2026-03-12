@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       publication_year: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       isbn: {
         type: Sequelize.STRING

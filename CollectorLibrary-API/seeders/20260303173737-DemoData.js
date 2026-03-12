@@ -8,17 +8,17 @@ module.exports = {
         id: 1,
         first_name: "J.K.",
         last_name: "Rowling",
-        birth_year: 1965,
+        birth_year: "1965",
         nationality: "British",
         createdAt: new Date(),
         updatedAt: new Date()
       },
-
+      
       {
         id: 2,
         first_name: "George",
         last_name: "Orwell",
-        birth_year: 1903,
+        birth_year: "1903",
         nationality: "British",
         createdAt: new Date(),
         updatedAt: new Date()
@@ -30,7 +30,7 @@ module.exports = {
           title: "Harry Potter and the Sorcerer's Stone",
           authorId: 1,
           genre: "Fantasy",
-          publication_year: 1997,
+          publication_year: "1997",
           isbn: "978-0439553448",
           page_count: 309,
           createdAt: new Date(),
@@ -42,7 +42,7 @@ module.exports = {
           title: "1984",
           authorId: 2,
           genre: "Dystopian",
-          publication_year: 1949,
+          publication_year: "1949",
           isbn: "978-0451524935",
           page_count: 328,
           createdAt: new Date(),
